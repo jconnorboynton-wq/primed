@@ -1,0 +1,168 @@
+import type { PageContent } from "../types";
+
+export const resources: PageContent = {
+  slug: "resources",
+  path: "/resources",
+  published: true,
+  noindex: false,
+  breadcrumb: "Resources",
+  seo: {
+    title: "Seller Resources: As-Is Sales and Cash Offers | Primed",
+    description:
+      "Practical guides for evaluating a cash-offer estimate, questions to ask before signing, preparing property information, and comparing a listing with an as-is sale.",
+  },
+  sections: [
+    {
+      type: "hero",
+      eyebrow: "Seller resources",
+      heading: "Guides for deciding with confidence",
+      intro:
+        "Plain-language guides to cash offers, purchase agreements and preparing for a property review, plus a tool to compare a listing with a possible as-is sale using your own numbers.",
+      primary: { label: "Explore My Selling Options", href: "#guides", id: "res_hero_guides" },
+      secondary: { label: "Compare Net Proceeds", href: "#net-proceeds", id: "res_hero_net" },
+    },
+    {
+      type: "toc",
+      tone: "pale",
+      heading: "In this resource center",
+      links: [
+        { label: "How to evaluate a cash-offer estimate", href: "#evaluate-estimate", summary: "What a range means and how to test it." },
+        { label: "Questions to ask before signing", href: "#before-signing", summary: "The terms that matter most in a purchase agreement." },
+        { label: "Preparing property information", href: "#prepare", summary: "What to gather for a faster, more accurate review." },
+        { label: "Listing vs. an as-is purchase", href: "#compare", summary: "A fair way to compare, plus a calculator." },
+        { label: "Compare written offers", href: "#offer-checker", summary: "Put up to three offers side by side." },
+      ],
+    },
+    {
+      type: "prose",
+      id: "evaluate-estimate",
+      tone: "light",
+      eyebrow: "Guide 1",
+      heading: "How to evaluate a cash-offer estimate",
+      paragraphs: [
+        "**Know what you're looking at.** An online estimate is a calculation from the inputs you provided. It isn't an appraisal, a broker's opinion of value or a purchase offer. A written offer comes only after the buyer reviews the property.",
+        "**Check the inputs first.** Most of the range comes from two numbers: the after-repair value and the repair budget. If the after-repair value is based on homes that aren't truly comparable, or the repair budget leaves out a major item, the range will be off. Look at recent sales of similar, updated homes nearby, and if you have a contractor quote or inspection report, use it.",
+        "**Understand the gap.** A cash buyer's price is typically below the after-repair value by the repair cost plus their holding, financing, resale and risk costs, plus any compensation involved in the transaction. That gap is normal; what matters is whether it's explained.",
+        "**Test it.** Change one input at a time and see how the range moves. If a small change in repairs moves the range a lot, ask for a closer look at the repair scope before relying on any number.",
+        "**Compare like with like.** When you compare a cash estimate with a listing price, subtract the listing's costs and time too. Use the [net proceeds comparison](#net-proceeds) below.",
+      ],
+      aside: {
+        title: "A good estimate comes with",
+        items: [
+          "The inputs and assumptions it used",
+          "A clear statement that it isn't an offer",
+          "A path to a real review of the property",
+          "No pressure to decide quickly",
+        ],
+      },
+    },
+    {
+      type: "list",
+      id: "before-signing",
+      tone: "pale",
+      heading: "Guide 2: Questions to ask before signing a purchase agreement",
+      intro: "Read the whole agreement, not just the price. These questions cover the terms that most often surprise sellers.",
+      style: "question",
+      columns: 2,
+      items: [
+        "**Price and deposit:** What's the earnest money, who holds it and when does it become non-refundable to the buyer?",
+        "**Review period:** How long does the buyer have to inspect, and can they cancel or renegotiate during it?",
+        "**Assignment:** Can the buyer assign the contract? Will you be told who is closing?",
+        "**Costs:** Which closing costs, taxes and fees are yours under this agreement?",
+        "**Closing date:** What's the target date, and what happens if it's missed?",
+        "**Condition:** What condition must the property be in at closing? What about belongings?",
+        "**Possession:** When do you hand over keys? Can you stay after closing?",
+        "**Default:** What happens if either side doesn't perform?",
+        "**Title:** Which title or escrow company? Who pays for title insurance?",
+        "**Advice:** Have you had an attorney or other adviser review it?",
+      ],
+      outro: "Rights to cancel come from the agreement and applicable law; there isn't one universal rule. Ask the buyer to point you to each term in writing.",
+    },
+    {
+      type: "list",
+      id: "prepare",
+      tone: "light",
+      heading: "Guide 3: Preparing property information for a review",
+      intro: "You don't need everything to start. Each item here makes a review faster and an estimate more accurate.",
+      style: "check",
+      columns: 2,
+      items: [
+        "Address, property type, approximate size, bedrooms and bathrooms",
+        "Known repairs, with any quotes, invoices or inspection reports",
+        "Age of roof, water heater and heating system, if known",
+        "Mortgage and lien payoff estimates",
+        "HOA contact details, dues and any special assessments",
+        "Lease end date, rent and deposit, if rented (no tenant documents online)",
+        "Names of everyone on title; for inherited homes, who has authority to sell",
+        "Your preferred timeline and any deadlines",
+        "Access details for a walkthrough",
+        "Questions you want answered before deciding",
+      ],
+    },
+    {
+      type: "prose",
+      id: "compare",
+      tone: "pale",
+      eyebrow: "Guide 4",
+      heading: "Comparing a listing with a possible as-is purchase",
+      paragraphs: [
+        "The fairest comparison is **net proceeds**, what you'd actually take home, along with time and certainty. A higher listing price can still net less if repairs, broker compensation, concessions and months of carrying costs add up. A lower as-is price can net less, too, if the property would have sold well with little preparation.",
+        "Use real figures where you can: a broker's market analysis for the listing price, contractor quotes for repairs, your lender's payoff statement and a written offer for the as-is price. Avoid counting the same cost twice. For example, if your assumed listing price already assumes repairs, include the repair cost; if not, don't.",
+        "Then weigh what numbers can't capture: how much disruption you can handle, how firm your timeline is and how much uncertainty you're comfortable with.",
+      ],
+    },
+    {
+      type: "component",
+      name: "netProceeds",
+      id: "net-proceeds",
+      tone: "light",
+      heading: "Net proceeds comparison",
+      intro: "Enter your own assumptions. Nothing is pre-filled, because commissions, taxes, repairs and timelines vary too much to assume.",
+    },
+    {
+      type: "component",
+      name: "offerCompare",
+      id: "offer-checker",
+      tone: "pale",
+      eyebrow: "Offer checker",
+      heading: "Compare written offers side by side",
+      intro: "Have more than one offer, from us or anyone else? Enter the terms from each. You'll see what you'd keep from each one and which terms are worth a question before you sign.",
+    },
+    {
+      type: "faq",
+      tone: "light",
+      heading: "Frequently asked questions",
+      groups: [
+        {
+          title: "Estimates and offers",
+          items: [
+            { q: "What's the difference between an estimate and an offer?", a: "An estimate is a calculation from your inputs. An offer is proposed written terms after a review. Only a signed purchase agreement is binding, and only according to its terms." },
+            { q: "Why is a cash offer usually below market value?", a: "The buyer takes on repairs, holding and resale costs and risk. Whether that tradeoff is worth it depends on your situation." },
+          ],
+        },
+        {
+          title: "Wholesaling and assignment",
+          items: [
+            { q: "What is real estate wholesaling?", a: "A wholesaler contracts to buy a property and may assign that contract to another buyer for a fee, or may close on the property. Rules for how wholesalers operate and disclose their role vary by state." },
+            { q: "Does assignment change my price?", a: "No. Your agreed price and terms stay as written. Assignment changes who completes the purchase. See [how it works](/how-it-works)." },
+          ],
+        },
+        {
+          title: "Process and costs",
+          items: [
+            { q: "Who handles the closing?", a: "A title or escrow company named in the agreement. They collect funds, pay off liens, prepare documents and disburse proceeds." },
+            { q: "Do I pay any fees to Primed?", a: "No fee is charged to you for reviewing your property or using our tools. Costs at closing are set out in the written agreement." },
+          ],
+        },
+      ],
+    },
+    {
+      type: "cta",
+      tone: "dark",
+      heading: "Have a property in mind?",
+      body: "Bring your numbers and questions. We'll review the property and explain what we see.",
+      primary: { label: "Explore My Selling Options", href: "/contact#request", id: "res_final_review" },
+      secondary: { label: "Estimate My Cash Offer", href: "/cash-offer-calculator", id: "res_final_estimate" },
+    },
+  ],
+};
